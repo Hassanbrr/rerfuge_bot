@@ -12,7 +12,7 @@ client = commands.Bot(command_prefix=CONFIG.PREFIX)
 
 @client.event
 async def on_ready():
-    print('bot online shod')
+    print('man online shodm')
     
 
     
