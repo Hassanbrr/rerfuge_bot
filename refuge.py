@@ -76,5 +76,10 @@ async def dastor_paksazi(ctx, count='10'):
   await ctx.channel.purge(limit=count+1)
   await ctx.send(">>> "+str(count)+'message delete shod.')
 
+@client.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send('che kossher type mikoni')
+
 
 client.run(CONFIG.TOKEN)
