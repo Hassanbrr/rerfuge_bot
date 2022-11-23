@@ -5,14 +5,14 @@ from asyncio import *
 
 
 class CONFIG:
-    TOKEN = 'ODk2MzkxMDA5MjQ2NzgxNDcx.YWGbLg.s8Ef36tBVd1A89afbRzo5uQ-o_s'
+    TOKEN = ''
     PREFIX = '-'
 
 client = commands.Bot(command_prefix=CONFIG.PREFIX)
 
 @client.event
 async def on_ready():
-    print('man online shodm')
+    print('Bot is ready')
     
 
     
@@ -74,12 +74,12 @@ async def setactivity(ctx, activity_type, *, activit_text):
 async def dastor_paksazi(ctx, count='10'):
   count = int(count)
   await ctx.channel.purge(limit=count+1)
-  await ctx.send(">>> "+str(count)+'message delete shod.')
+  await ctx.send(">>> "+str(count)+'message deleted.')
 
 @client.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send('che kossher type mikoni')
+        await ctx.send('Command not found')
 
 
 client.run(CONFIG.TOKEN)
