@@ -28,7 +28,7 @@ async def join(ctx):
   my_channel = ctx.message.author.voice.channel
   #my_channel = client.get_channel(956470964575674383)
   voice_object = await my_channel.connect()
-  voice_object.play(discord.FFmpegPCMAudio('https://cdn.discordapp.com/attachments/943190929672658964/957278306451996793/Koorosh_-_Yebaram_Man_Ft_Arta_Behzad_Leito__Raha_128.mp3'))
+  voice_object.play(discord.FFmpegPCMAudio('https://cdn.discordapp.com/attachments/876726875655909379/1044878144290705408/Farhad_Mehrad_-_Ayeneh-hawww.mahikuchul.blogfa.com.mp3'))
   await ctx.send('Connected')
 @client.command(aliases=['dc'])
 
