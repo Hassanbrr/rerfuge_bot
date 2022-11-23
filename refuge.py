@@ -29,7 +29,7 @@ async def join(ctx):
   #my_channel = client.get_channel(956470964575674383)
   voice_object = await my_channel.connect()
   voice_object.play(discord.FFmpegPCMAudio('https://cdn.discordapp.com/attachments/943190929672658964/957278306451996793/Koorosh_-_Yebaram_Man_Ft_Arta_Behzad_Leito__Raha_128.mp3'))
-  await ctx.send('man omadam ro voice ha ha ha :)))')
+  await ctx.send('Connected')
 @client.command(aliases=['dc'])
 
 async def disconnect(ctx):
@@ -37,7 +37,7 @@ async def disconnect(ctx):
   if voice_object != None:
     await voice_object.disconnect() 
     voice_object = None
-    await ctx.send('man raftm bye')
+    await ctx.send('disconnected')
   else:
     await ctx.send('bot is disconnect')
     my_channel = ctx.message.author.voice.channel
